@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 企業官網建置方案｜7–10頁企業形象網站</title>
+  <meta name="description" content="2026 企業形象官網建置方案，包含 7–10 個主要頁面、RWD 響應式設計、網站後台、圖片自行更新、基礎 SEO、GA4、Search Console 與 SSL 設定。" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="2026 企業官網建置方案" />
+  <meta property="og:description" content="7–10頁企業形象網站，含後台圖片更新、RWD、基礎 SEO 與網站上線設定。" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #191919;
+      --muted: #666d76;
+      --line: #e4e7eb;
+      --accent: #111827;
+      --soft: #eef1f5;
+      --success: #176b45;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    header {
+      padding: 84px 0 64px;
+      background: linear-gradient(180deg, #fff 0%, #f6f7f9 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow { font-size: 14px; letter-spacing: .14em; color: var(--muted); font-weight: 700; }
+    h1 { font-size: clamp(38px, 6vw, 72px); line-height: 1.08; margin: 14px 0 20px; letter-spacing: -.03em; }
+    .lead { max-width: 760px; font-size: 20px; color: var(--muted); margin: 0; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .tag { padding: 8px 12px; border: 1px solid var(--line); background: #fff; border-radius: 999px; font-size: 14px; }
+    main { padding: 44px 0 80px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .card { grid-column: span 12; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+    .half { grid-column: span 6; }
+    h2 { margin: 0 0 18px; font-size: 26px; }
+    h3 { margin: 24px 0 8px; font-size: 18px; }
+    p { margin: 0 0 14px; }
+    ul { padding-left: 1.2em; margin: 10px 0 0; }
+    li { margin: 5px 0; }
+    .checklist { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px 16px; }
+    .checklist li::before { content: "✓"; color: var(--success); font-weight: 800; margin-right: 9px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 13px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th:last-child, td:last-child { text-align: right; white-space: nowrap; }
+    .price-card { background: var(--accent); color: #fff; }
+    .price-card .muted { color: #cbd5e1; }
+    .price { font-size: clamp(44px, 8vw, 76px); line-height: 1; font-weight: 800; letter-spacing: -.04em; margin: 12px 0; }
+    .old { text-decoration: line-through; opacity: .68; }
+    .note { font-size: 14px; color: var(--muted); }
+    .price-card .note { color: #cbd5e1; }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: var(--soft); font-size: 13px; font-weight: 700; }
+    .price-card .pill { background: rgba(255,255,255,.12); }
+    footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 760px) {
+      header { padding-top: 56px; }
+      .half { grid-column: span 12; }
+      .checklist { grid-template-columns: 1fr; }
+      .card { padding: 22px; }
+      th, td { padding: 11px 6px; font-size: 14px; }
+    }
+    @media print {
+      body { background: #fff; }
+      header { padding: 30px 0; }
+      main { padding: 20px 0; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">2026 CORPORATE WEBSITE PROPOSAL</div>
+      <h1>企業官網建置方案</h1>
+      <p class="lead">適合企業品牌展示、服務介紹、案例呈現與客戶詢問。網站採 RWD 響應式設計，並提供後台讓企業可自行更新圖片與基本內容。</p>
+      <div class="hero-meta">
+        <span class="tag">7–10 個主要頁面</span>
+        <span class="tag">RWD 響應式設計</span>
+        <span class="tag">後台自行更新圖片</span>
+        <span class="tag">基礎 SEO</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap grid">
+      <section class="card half">
+        <span class="pill">專案範圍</span>
+        <h2>網站頁面規劃</h2>
+        <ul class="checklist">
+          <li>首頁</li>
+          <li>關於我們</li>
+          <li>產品／服務介紹</li>
+          <li>產品／服務詳細頁</li>
+          <li>最新消息</li>
+          <li>案例／作品展示</li>
+          <li>常見問題</li>
+          <li>聯絡我們</li>
+          <li>企業優勢</li>
+          <li>其他需求頁面</li>
+        </ul>
+      </section>
+
+      <section class="card half">
+        <span class="pill">後台管理</span>
+        <h2>企業可自行更新</h2>
+        <ul class="checklist">
+          <li>首頁圖片</li>
+          <li>Banner 圖片</li>
+          <li>產品／服務圖片</li>
+          <li>最新消息內容</li>
+          <li>案例／作品圖片</li>
+          <li>基本文字內容</li>
+          <li>圖片上傳與刪除</li>
+          <li>網站內容管理</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <span class="pill">包含項目</span>
+        <h2>完整建置內容</h2>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th><th>費用</th></tr></thead>
+          <tbody>
+            <tr><td>網站規劃與視覺設計</td><td>資訊架構、UI/UX、首頁設計、RWD 設計</td><td>NT$50,000</td></tr>
+            <tr><td>7–10 頁網站製作</td><td>企業主要頁面與前端製作</td><td>NT$35,000</td></tr>
+            <tr><td>後台管理系統</td><td>圖片、文字、消息及基本內容更新</td><td>NT$25,000</td></tr>
+            <tr><td>網站功能建置</td><td>聯絡表單、地圖、社群連結、基礎追蹤與安全設定</td><td>NT$15,000</td></tr>
+            <tr><td>圖片及內容處理</td><td>裁切、壓縮、格式轉換與版面整理</td><td>NT$10,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card half">
+        <span class="pill">基礎 SEO</span>
+        <h2>搜尋引擎友善設定</h2>
+        <ul class="checklist">
+          <li>HTML Title</li>
+          <li>Meta Description</li>
+          <li>H1／H2／H3 結構</li>
+          <li>圖片 ALT</li>
+          <li>SEO Friendly URL</li>
+          <li>Canonical URL</li>
+          <li>Sitemap.xml</li>
+          <li>Robots.txt</li>
+          <li>Google Search Console</li>
+          <li>Google Analytics 4</li>
+          <li>Open Graph</li>
+          <li>基本 Schema</li>
+        </ul>
+        <p class="note" style="margin-top:18px">此項為網站技術與頁面層級的基礎 SEO 設定，不包含關鍵字排名保證、長期 SEO 操作、文章撰寫或外部連結建設。</p>
+      </section>
+
+      <section class="card half">
+        <span class="pill">網站功能</span>
+        <h2>上線所需基本功能</h2>
+        <ul class="checklist">
+          <li>RWD 響應式版面</li>
+          <li>聯絡表單</li>
+          <li>Google Maps</li>
+          <li>電話／Email 快速聯絡</li>
+          <li>社群媒體連結</li>
+          <li>圖片展示</li>
+          <li>SSL HTTPS 設定</li>
+          <li>基本網站速度優化</li>
+          <li>GA4 串接</li>
+          <li>Search Console 設定</li>
+        </ul>
+      </section>
+
+      <section class="card price-card">
+        <span class="pill">2026 專案優惠</span>
+        <p class="muted" style="margin-top:18px">專案原價 <span class="old">NT$135,000</span></p>
+        <div class="price">NT$128,000</div>
+        <p>未稅價格｜5% 營業稅 NT$6,400｜<strong>含稅總額 NT$134,400</strong></p>
+        <p class="note">報價有效期限：自報價日起 30 日內有效。</p>
+      </section>
+
+      <section class="card half">
+        <h2>製作時程</h2>
+        <p><strong>預計 6–8 週</strong></p>
+        <p class="note">自主要素材（Logo、文字、圖片等）提供完成並收到訂金後開始計算。</p>
+        <h3>修改與保固</h3>
+        <p>設計階段包含 2 次整體修改；上線後提供 30 日基本保固。</p>
+      </section>
+
+      <section class="card half">
+        <h2>付款方式</h2>
+        <table>
+          <tbody>
+            <tr><td>第一期 50%</td><td>NT$64,000</td></tr>
+            <tr><td>第二期 30%</td><td>NT$38,400</td></tr>
+            <tr><td>第三期 20%</td><td>NT$25,600</td></tr>
+          </tbody>
+        </table>
+        <p class="note" style="margin-top:12px">以上金額為未稅計算。</p>
+      </section>
+
+      <section class="card">
+        <h2>網域、主機與年度維護</h2>
+        <table>
+          <tbody>
+            <tr><td>網域</td><td>約 NT$800–1,500／年</td></tr>
+            <tr><td>網站主機</td><td>約 NT$6,000–12,000／年</td></tr>
+            <tr><td>年度維護方案</td><td>NT$18,000／年</td></tr>
+          </tbody>
+        </table>
+        <p class="note" style="margin-top:12px">年度維護包含系統基本維護、網站備份、安全性更新、基本故障排除、網站運作檢查與少量圖片／文字更新。</p>
+      </section>
+
+      <section class="card">
+        <h2>不包含項目</h2>
+        <p>專業攝影、影片拍攝、商業圖庫授權、Logo 設計、大量文案撰寫、進階會員／購物車／金流／預約功能、長期 SEO 行銷與關鍵字排名保證。如有需求，可另行評估報價。</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">2026 企業官網建置方案｜本頁內容供專案需求與報價確認使用。</div>
+  </footer>
+</body>
+</html>
