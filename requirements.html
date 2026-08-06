@@ -60,10 +60,11 @@
     .usecase:last-child { border-bottom: 0; }
     .usecase:hover { background: #faf9f7; }
     .usecase.selected { background: #f7f5f0; }
-    .check { width: 22px; height: 22px; accent-color: var(--accent); }
+    .check { width: 22px; height: 22px; accent-color: var(--accent); cursor: pointer; }
+    .usecase-copy { cursor: pointer; min-width: 0; }
     .usecase-title { font-weight: 680; }
     .usecase-meta { color: var(--muted); font-size: 12px; margin-top: 2px; }
-    .priority { width: 100%; border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 8px 9px; color: var(--text); }
+    .priority { width: 100%; border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 8px 9px; color: var(--text); cursor: pointer; }
     .summary { margin-top: 26px; background: var(--accent); color: #fff; border-radius: var(--radius); padding: 28px; position: relative; overflow: hidden; }
     .summary::after { content: ""; position: absolute; width: 240px; height: 240px; right: -100px; top: -120px; background: rgba(255,255,255,.05); border-radius: 50%; }
     .summary-top { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
@@ -290,17 +291,18 @@ function renderSections() {
       </div>
       <div class="usecases">
         ${section.items.map(item => `
-          <label class="usecase" data-id="${item[0]}">
-            <input class="check" type="checkbox" data-id="${item[0]}" />
-            <div>
+          <div class="usecase" data-id="${item[0]}">
+            <input id="check-${item[0]}" class="check" type="checkbox" data-id="${item[0]}" />
+            <label class="usecase-copy" for="check-${item[0]}">
               <div class="usecase-title">${item[1]}</div>
               <div class="usecase-meta">${item[0]}｜${item[2]}</div>
-            </div>
+            </label>
             <select class="priority" data-priority="${item[0]}" aria-label="需求優先程度">
+              <option value="">請選擇</option>
               <option value="必要">必要</option>
               <option value="想要">想要</option>
             </select>
-          </label>`).join('')}
+          </div>`).join('')}
       </div>
     </section>`).join('');
 }
@@ -311,7 +313,7 @@ function findItem(id) { return getAllItems().find(item => item[0] === id); }
 function selectedData() {
   return [...document.querySelectorAll('.check:checked')].map(check => {
     const id = check.dataset.id;
-    return { id, priority: document.querySelector(`[data-priority="${id}"]`).value, item: findItem(id) };
+    return { id, priority: document.querySelector(`[data-priority="${id}"]`).value || '必要', item: findItem(id) };
   });
 }
 
@@ -320,7 +322,6 @@ function updateUI() {
   document.querySelectorAll('.usecase').forEach(row => {
     const checked = row.querySelector('.check').checked;
     row.classList.toggle('selected', checked);
-    row.querySelector('.priority').disabled = !checked;
   });
 
   SECTIONS.forEach((section, sIndex) => {
@@ -428,7 +429,7 @@ function resetAll() {
   if (!confirm('確定要清除目前所有勾選與填寫內容嗎？')) return;
   localStorage.removeItem(STORAGE_KEY);
   document.querySelectorAll('.check').forEach(c => c.checked = false);
-  document.querySelectorAll('.priority').forEach(p => p.value = '必要');
+  document.querySelectorAll('.priority').forEach(p => p.value = '');
   document.getElementById('contact').value = '';
   document.getElementById('notes').value = '';
   updateUI();
@@ -438,7 +439,24 @@ renderSections();
 loadState();
 updateUI();
 document.addEventListener('change', e => {
-  if (e.target.matches('.check,.priority,#company,#contact,#date')) updateUI();
+  if (e.target.matches('.priority')) {
+    const id = e.target.dataset.priority;
+    const check = document.querySelector(`.check[data-id="${id}"]`);
+    if (check) check.checked = Boolean(e.target.value);
+    updateUI();
+    return;
+  }
+  if (e.target.matches('.check')) {
+    const id = e.target.dataset.id;
+    const priority = document.querySelector(`[data-priority="${id}"]`);
+    if (priority) {
+      if (e.target.checked && !priority.value) priority.value = '必要';
+      if (!e.target.checked) priority.value = '';
+    }
+    updateUI();
+    return;
+  }
+  if (e.target.matches('#company,#contact,#date')) updateUI();
 });
 document.getElementById('notes').addEventListener('input', saveState);
 document.getElementById('company').addEventListener('input', saveState);
