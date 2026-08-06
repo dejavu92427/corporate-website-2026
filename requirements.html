@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>羅鈺室內裝修設計｜官網需求確認</title>
+  <meta name="description" content="羅鈺室內裝修設計官網需求確認表。請依實際使用情境勾選需求，系統會自動整理本次專案涉及的網站製作模組。" />
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root {
+      --bg: #f5f4f1;
+      --card: #ffffff;
+      --text: #1e1f20;
+      --muted: #71717a;
+      --line: #e7e5e4;
+      --accent: #22201d;
+      --accent-soft: #efede8;
+      --green: #176b45;
+      --amber: #9a6700;
+      --blue: #275ea8;
+      --shadow: 0 14px 40px rgba(20,20,20,.06);
+      --radius: 22px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .hero {
+      padding: 76px 0 50px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff 0%, #f5f4f1 100%);
+    }
+    .eyebrow { font-size: 13px; letter-spacing: .16em; color: var(--muted); font-weight: 800; }
+    h1 { margin: 14px 0 18px; font-size: clamp(38px, 7vw, 78px); line-height: 1.05; letter-spacing: -.045em; }
+    .lead { margin: 0; max-width: 830px; font-size: clamp(17px, 2vw, 21px); color: var(--muted); }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+    .tag { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 7px 11px; font-size: 13px; }
+    .notice { margin-top: 24px; padding: 16px 18px; background: #fff; border: 1px solid var(--line); border-radius: 14px; color: var(--muted); font-size: 14px; }
+    main { padding: 36px 0 110px; }
+    .client-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 22px; }
+    .field { background: #fff; border: 1px solid var(--line); padding: 14px; border-radius: 15px; }
+    .field label { display: block; color: var(--muted); font-size: 12px; font-weight: 700; margin-bottom: 6px; }
+    .field input { border: 0; outline: 0; width: 100%; background: transparent; color: var(--text); }
+    .section { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin: 18px 0; overflow: hidden; }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding: 24px 26px 18px; border-bottom: 1px solid var(--line); }
+    .section-head h2 { margin: 2px 0 4px; font-size: 24px; letter-spacing: -.02em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
+    .section-count { color: var(--muted); white-space: nowrap; font-size: 13px; padding-top: 5px; }
+    .usecases { padding: 8px 16px 16px; }
+    .usecase { display: grid; grid-template-columns: 34px 1fr 122px; gap: 12px; align-items: center; padding: 14px 10px; border-bottom: 1px solid #f0efed; border-radius: 12px; transition: background .15s ease; }
+    .usecase:last-child { border-bottom: 0; }
+    .usecase:hover { background: #faf9f7; }
+    .usecase.selected { background: #f7f5f0; }
+    .check { width: 22px; height: 22px; accent-color: var(--accent); }
+    .usecase-title { font-weight: 680; }
+    .usecase-meta { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .priority { width: 100%; border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 8px 9px; color: var(--text); }
+    .summary { margin-top: 26px; background: var(--accent); color: #fff; border-radius: var(--radius); padding: 28px; position: relative; overflow: hidden; }
+    .summary::after { content: ""; position: absolute; width: 240px; height: 240px; right: -100px; top: -120px; background: rgba(255,255,255,.05); border-radius: 50%; }
+    .summary-top { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .summary h2 { margin: 0 0 6px; font-size: 28px; }
+    .summary p { margin: 0; color: #cbd0d6; }
+    .summary-stat { text-align: right; white-space: nowrap; }
+    .summary-stat strong { display: block; font-size: 36px; line-height: 1; }
+    .modules { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 22px; }
+    .module { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 14px; }
+    .module-head { display: flex; justify-content: space-between; gap: 12px; }
+    .module-id { color: #afb6c0; font-size: 12px; font-weight: 800; }
+    .module-name { font-weight: 780; margin-top: 2px; }
+    .module-type { border-radius: 999px; padding: 4px 8px; font-size: 11px; font-weight: 800; height: fit-content; background: rgba(255,255,255,.1); }
+    .module-reason { color: #cbd0d6; font-size: 12px; margin-top: 7px; }
+    .empty { grid-column: 1 / -1; border: 1px dashed rgba(255,255,255,.24); border-radius: 14px; padding: 24px; text-align: center; color: #cbd0d6; }
+    .actionbar { position: fixed; z-index: 10; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,.94); backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
+    .actionbar-inner { width: min(calc(100% - 28px), var(--max)); margin: 0 auto; padding: 12px 0; display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+    .status { color: var(--muted); font-size: 14px; }
+    .buttons { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn { border: 1px solid var(--line); background: #fff; border-radius: 11px; padding: 9px 13px; color: var(--text); font-weight: 700; }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn.danger { color: #9f3131; }
+    .legend { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 12px; color: var(--muted); font-size: 12px; }
+    .legend span { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 5px 8px; }
+    .notes { margin-top: 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+    .notes h2 { margin: 0 0 10px; font-size: 22px; }
+    .notes textarea { width: 100%; min-height: 110px; resize: vertical; border: 1px solid var(--line); border-radius: 12px; padding: 12px; outline: 0; }
+    .footnote { color: var(--muted); font-size: 12px; margin-top: 12px; }
+    .toast { position: fixed; right: 18px; bottom: 86px; background: #111; color: #fff; border-radius: 10px; padding: 10px 13px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: .2s ease; z-index: 20; font-size: 13px; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    @media (max-width: 760px) {
+      .hero { padding-top: 52px; }
+      .client-info { grid-template-columns: 1fr; }
+      .section-head { padding: 20px 18px 15px; }
+      .usecases { padding: 6px 8px 12px; }
+      .usecase { grid-template-columns: 30px 1fr; }
+      .priority { grid-column: 2; width: 150px; }
+      .modules { grid-template-columns: 1fr; }
+      .summary-top { display: block; }
+      .summary-stat { text-align: left; margin-top: 16px; }
+      .actionbar-inner { align-items: flex-start; }
+      .status { display: none; }
+      .buttons { width: 100%; justify-content: stretch; }
+      .btn { flex: 1; }
+    }
+    @media print {
+      body { background: #fff; }
+      .hero { padding: 28px 0; }
+      main { padding: 20px 0; }
+      .actionbar, .btn, .notice { display: none !important; }
+      .section, .notes { box-shadow: none; break-inside: avoid; }
+      .summary { break-inside: avoid; }
+      .usecase:not(.selected) { display: none; }
+      .section-count { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">WEBSITE REQUIREMENTS CHECKLIST</div>
+      <h1>羅鈺室內裝修設計<br>官網需求確認</h1>
+      <p class="lead">請從「實際會怎麼使用網站」出發勾選需求，不需要理解技術名詞。勾選後，下方會自動整理本次專案涉及的製作／收費模組，作為開發範圍與報價確認依據。</p>
+      <div class="hero-tags">
+        <span class="tag">依使用情境勾選</span>
+        <span class="tag">自動整理製作模組</span>
+        <span class="tag">避免重複計價</span>
+        <span class="tag">可列印／存 PDF</span>
+      </div>
+      <div class="notice">本頁不會把填寫內容傳送到伺服器；資料只暫存在目前瀏覽器。完成後請使用「複製需求摘要」或「列印／存 PDF」留存結果。</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="client-info">
+        <div class="field"><label for="company">公司／專案名稱</label><input id="company" value="羅鈺室內裝修設計" /></div>
+        <div class="field"><label for="contact">確認人</label><input id="contact" placeholder="請輸入姓名" /></div>
+        <div class="field"><label for="date">確認日期</label><input id="date" type="date" /></div>
+      </div>
+
+      <div id="sections"></div>
+
+      <section class="notes">
+        <h2>其他補充需求</h2>
+        <textarea id="notes" placeholder="例如：希望風格接近某個參考網站、作品照片數量、是否已有英文文案、是否需要串接既有系統等。"></textarea>
+        <div class="footnote">勾選「必要」與「想要」都會納入模組整理；報價時可再依優先順序拆成第一階段與第二階段。</div>
+      </section>
+
+      <section class="summary" id="summary">
+        <div class="summary-top">
+          <div>
+            <h2>本次需求涉及的製作模組</h2>
+            <p>同一模組即使由多個使用情境觸發，也只會列出一次。</p>
+          </div>
+          <div class="summary-stat"><strong id="moduleCount">0</strong><span>個模組</span></div>
+        </div>
+        <div class="modules" id="modules"><div class="empty">尚未勾選需求。</div></div>
+      </section>
+
+      <div class="legend">
+        <span>B｜Base 基礎建置</span>
+        <span>O｜Optional 選配功能</span>
+        <span>A｜Advanced 進階功能</span>
+      </div>
+    </div>
+  </main>
+
+  <div class="actionbar">
+    <div class="actionbar-inner">
+      <div class="status" id="status">已選 0 個使用情境</div>
+      <div class="buttons">
+        <button class="btn danger" id="resetBtn">清除</button>
+        <button class="btn" id="printBtn">列印／存 PDF</button>
+        <button class="btn primary" id="copyBtn">複製需求摘要</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast">已複製需求摘要</div>
+
+<script>
+const MODULES = {
+  M01:{name:'基礎網站框架',type:'B'}, M02:{name:'RWD 響應式製作',type:'B'}, M03:{name:'首頁形象模組',type:'B'},
+  M04:{name:'作品展示系統',type:'B'}, M05:{name:'作品分類系統',type:'O'}, M06:{name:'作品進階篩選',type:'A'},
+  M07:{name:'作品圖片瀏覽器',type:'O'}, M08:{name:'作品影音功能',type:'O'}, M09:{name:'相關作品推薦',type:'O'},
+  M10:{name:'作品 CMS 後台',type:'O'}, M11:{name:'團隊展示',type:'O'}, M12:{name:'團隊 CMS',type:'O'},
+  M13:{name:'獎項／媒體模組',type:'O'}, M14:{name:'內容關聯系統',type:'A'}, M15:{name:'合作夥伴模組',type:'O'},
+  M16:{name:'最新消息／文章系統',type:'O'}, M17:{name:'文章 CMS',type:'O'}, M18:{name:'社群分享',type:'O'},
+  M19:{name:'人才招募',type:'O'}, M20:{name:'職缺 CMS',type:'O'}, M21:{name:'基礎聯絡功能',type:'B'},
+  M22:{name:'一般諮詢表單',type:'B'}, M23:{name:'進階需求表單',type:'O'}, M24:{name:'表單附件上傳',type:'O'},
+  M25:{name:'表單自動回覆',type:'O'}, M26:{name:'詢問案件後台',type:'A'}, M27:{name:'Google Sheet 串接',type:'A'},
+  M28:{name:'多語系網站',type:'O'}, M29:{name:'多語系 CMS',type:'A'}, M30:{name:'基礎品牌動畫',type:'O'},
+  M31:{name:'進階互動動畫',type:'A'}, M32:{name:'基礎 SEO',type:'B'}, M33:{name:'GA4 流量分析',type:'B'},
+  M34:{name:'Search Console',type:'B'}, M35:{name:'圖片效能最佳化',type:'B'}, M36:{name:'網站設定 CMS',type:'O'},
+  M37:{name:'首頁 CMS',type:'O'}, M38:{name:'網站備份',type:'B'}, M39:{name:'表單 Spam 防護',type:'B'},
+  M40:{name:'360 環景',type:'A'}, M41:{name:'Before / After',type:'A'}, M42:{name:'PDF／檔案下載',type:'O'},
+  M43:{name:'線上預約系統',type:'A'}, M44:{name:'會員／客戶專區',type:'A'}
+};
+
+const SECTIONS = [
+  {title:'① 訪客如何認識我們',desc:'品牌、服務、團隊與信任建立。',items:[
+    ['U01','讓訪客快速了解羅鈺的品牌與設計風格','首頁品牌形象、公司理念、代表作品',['M01','M03']],
+    ['U02','在首頁播放大圖或形象影片','滿版照片、輪播或影片 Banner',['M03']],
+    ['U12','介紹公司理念、歷史、證照與服務範圍','關於我們',['M01']],
+    ['U13','清楚介紹住宅、商業空間、老屋翻新等服務','服務項目',['M01']],
+    ['U14','讓客戶了解從諮詢到完工的設計流程','設計流程',['M01']],
+    ['U15','介紹設計總監或公司團隊','團隊介紹',['M11']],
+    ['U16','每一位設計師都有自己的介紹頁','團隊詳細頁',['M12']],
+    ['U17','顯示公司歷年得獎紀錄','獎項展示',['M13']],
+    ['U18','得獎紀錄可以連結到對應作品','獎項／作品關聯',['M14']],
+    ['U19','顯示媒體採訪、雜誌與網路報導','媒體報導',['M13']],
+    ['U20','顯示合作建商、品牌或合作夥伴','合作夥伴',['M15']]
+  ]},
+  {title:'② 訪客如何找作品',desc:'作品瀏覽、分類、照片與案例互動。',items:[
+    ['U03','讓訪客瀏覽所有設計作品','作品列表',['M04']],
+    ['U04','讓訪客依住宅／商空／辦公等類型找作品','作品分類',['M05']],
+    ['U05','讓訪客依年份、地區、風格等條件篩選作品','多條件作品篩選',['M06']],
+    ['U06','點進作品後，可以看到完整作品照片與介紹','作品詳細頁',['M04']],
+    ['U07','點擊照片可以放大、左右切換瀏覽','全螢幕圖片瀏覽',['M07']],
+    ['U08','作品中可以播放 YouTube／Vimeo 影片','影音內容',['M08']],
+    ['U09','看完作品後，可以繼續看其他相關作品','相關作品推薦',['M09']],
+    ['U50','希望顯示 360 度環景作品','360 環景',['M40']],
+    ['U51','希望可以比較裝修前／裝修後照片','Before / After',['M41']]
+  ]},
+  {title:'③ 公司要發布哪些內容',desc:'消息、文章、媒體、招募等長期內容。',items:[
+    ['U21','可以發布公司消息、活動或文章','最新消息',['M16']],
+    ['U23','文章可以依類型分類','文章分類',['M16']],
+    ['U24','文章或作品可以分享到 LINE／Facebook','社群分享',['M18']],
+    ['U25','顯示人才招募資訊','招募頁面',['M19']],
+    ['U26','不同職缺可以有各自的工作內容','職缺管理',['M20']],
+    ['U52','希望訪客可以下載公司簡介或作品集 PDF','檔案下載',['M42']]
+  ]},
+  {title:'④ 潛在客戶如何聯絡',desc:'從瀏覽網站到產生有效詢問。',items:[
+    ['U27','讓訪客直接打電話、Email 或加入 LINE','快速聯絡',['M21']],
+    ['U28','讓潛在客戶填寫裝修諮詢表單','一般諮詢表單',['M22','M39']],
+    ['U29','諮詢時詢問坪數、預算、屋況、地區等資料','進階諮詢表單',['M23']],
+    ['U30','諮詢時可以上傳格局圖或相關資料','附件上傳',['M24']],
+    ['U31','表單送出後，公司會收到 Email 通知','表單 Email 通知',['M22']],
+    ['U32','表單送出後，自動寄確認信給客戶','自動回覆',['M25']],
+    ['U33','可以在後台查看歷史詢問紀錄','詢問案件管理',['M26']],
+    ['U34','詢問資料自動同步到 Google Sheet','Google Sheet 串接',['M27']],
+    ['U35','網站上顯示公司地址與 Google 地圖','地圖',['M21']],
+    ['U53','希望訪客可以直接線上選日期預約諮詢','線上預約',['M43']]
+  ]},
+  {title:'⑤ 公司希望自己管理什麼',desc:'哪些內容要由內部人員自行新增、修改與上下架。',items:[
+    ['U10','我們可以自己新增、修改、下架作品','作品管理後台',['M10']],
+    ['U11','我們可以自己調整作品照片順序','圖片排序管理',['M10']],
+    ['U22','我們可以自己新增、修改文章','文章管理後台',['M17']],
+    ['U46','希望自己可以修改電話、地址、社群等基本資料','網站基本設定後台',['M36']],
+    ['U47','希望首頁的精選作品、Banner 可以自己調整','首頁管理後台',['M37']],
+    ['U37','我們可以分別維護中英文內容','多語系後台',['M29']]
+  ]},
+  {title:'⑥ 網站體驗與行銷基礎',desc:'多語言、動畫、SEO、流量與裝置支援。',items:[
+    ['U36','網站同時提供中文版與英文版','多語系',['M28']],
+    ['U38','希望網站有滑動、淡入與頁面轉場動畫','品牌動畫',['M30']],
+    ['U39','希望有較特殊的滾動、視差或圖片互動效果','進階動畫',['M31']],
+    ['U40','希望搜尋室內設計相關關鍵字時容易被找到','SEO 基礎設定',['M32']],
+    ['U41','希望知道每天多少人瀏覽網站、從哪裡進來','GA4 流量分析',['M33']],
+    ['U42','希望知道網站在 Google 搜尋的曝光情況','Search Console',['M34']],
+    ['U43','分享網站到 LINE／Facebook 時有正確標題與圖片','社群分享 SEO',['M18','M32']],
+    ['U44','希望網站在手機、平板、電腦都有良好瀏覽體驗','RWD',['M02']],
+    ['U45','希望網站照片載入速度不要太慢','圖片最佳化',['M35']],
+    ['U48','希望網站資料定期備份','備份機制',['M38']],
+    ['U49','希望防止聯絡表單收到大量垃圾訊息','Spam 防護',['M39']]
+  ]},
+  {title:'⑦ 特殊需求',desc:'可能需要獨立評估工期與技術範圍的功能。',items:[
+    ['U54','希望客戶登入後查看專案或施工進度','客戶專區',['M44']]
+  ]}
+];
+
+const STORAGE_KEY = 'luoyu-website-requirements-v1';
+const sectionsEl = document.getElementById('sections');
+const modulesEl = document.getElementById('modules');
+const moduleCountEl = document.getElementById('moduleCount');
+const statusEl = document.getElementById('status');
+const toast = document.getElementById('toast');
+
+function renderSections() {
+  sectionsEl.innerHTML = SECTIONS.map((section, sIndex) => `
+    <section class="section">
+      <div class="section-head">
+        <div><h2>${section.title}</h2><p>${section.desc}</p></div>
+        <div class="section-count" id="sectionCount${sIndex}">0 / ${section.items.length}</div>
+      </div>
+      <div class="usecases">
+        ${section.items.map(item => `
+          <label class="usecase" data-id="${item[0]}">
+            <input class="check" type="checkbox" data-id="${item[0]}" />
+            <div>
+              <div class="usecase-title">${item[1]}</div>
+              <div class="usecase-meta">${item[0]}｜${item[2]}</div>
+            </div>
+            <select class="priority" data-priority="${item[0]}" aria-label="需求優先程度">
+              <option value="必要">必要</option>
+              <option value="想要">想要</option>
+            </select>
+          </label>`).join('')}
+      </div>
+    </section>`).join('');
+}
+
+function getAllItems() { return SECTIONS.flatMap(section => section.items); }
+function findItem(id) { return getAllItems().find(item => item[0] === id); }
+
+function selectedData() {
+  return [...document.querySelectorAll('.check:checked')].map(check => {
+    const id = check.dataset.id;
+    return { id, priority: document.querySelector(`[data-priority="${id}"]`).value, item: findItem(id) };
+  });
+}
+
+function updateUI() {
+  const selected = selectedData();
+  document.querySelectorAll('.usecase').forEach(row => {
+    const checked = row.querySelector('.check').checked;
+    row.classList.toggle('selected', checked);
+    row.querySelector('.priority').disabled = !checked;
+  });
+
+  SECTIONS.forEach((section, sIndex) => {
+    const ids = section.items.map(i => i[0]);
+    const count = selected.filter(s => ids.includes(s.id)).length;
+    document.getElementById(`sectionCount${sIndex}`).textContent = `${count} / ${section.items.length}`;
+  });
+
+  const moduleReasons = new Map();
+  selected.forEach(sel => {
+    sel.item[3].forEach(moduleId => {
+      if (!moduleReasons.has(moduleId)) moduleReasons.set(moduleId, []);
+      moduleReasons.get(moduleId).push(`${sel.id} ${sel.item[1]}`);
+    });
+  });
+
+  const moduleIds = [...moduleReasons.keys()].sort((a,b) => Number(a.slice(1))-Number(b.slice(1)));
+  moduleCountEl.textContent = moduleIds.length;
+  statusEl.textContent = `已選 ${selected.length} 個使用情境｜涉及 ${moduleIds.length} 個製作模組`;
+
+  if (!moduleIds.length) {
+    modulesEl.innerHTML = '<div class="empty">尚未勾選需求。</div>';
+  } else {
+    modulesEl.innerHTML = moduleIds.map(id => {
+      const m = MODULES[id];
+      const reasons = moduleReasons.get(id);
+      return `<div class="module">
+        <div class="module-head">
+          <div><div class="module-id">${id}</div><div class="module-name">${m.name}</div></div>
+          <div class="module-type">${m.type}</div>
+        </div>
+        <div class="module-reason">由 ${reasons.length} 個已勾選情境觸發：${reasons.map(r => r.split(' ')[0]).join('、')}</div>
+      </div>`;
+    }).join('');
+  }
+  saveState();
+}
+
+function saveState() {
+  const state = {
+    company: document.getElementById('company').value,
+    contact: document.getElementById('contact').value,
+    date: document.getElementById('date').value,
+    notes: document.getElementById('notes').value,
+    selected: selectedData().map(s => ({id:s.id,priority:s.priority}))
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function loadState() {
+  const today = new Date();
+  const localDate = new Date(today.getTime() - today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+  document.getElementById('date').value = localDate;
+  try {
+    const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    if (!state) return;
+    if (state.company) document.getElementById('company').value = state.company;
+    if (state.contact) document.getElementById('contact').value = state.contact;
+    if (state.date) document.getElementById('date').value = state.date;
+    if (state.notes) document.getElementById('notes').value = state.notes;
+    (state.selected || []).forEach(s => {
+      const check = document.querySelector(`.check[data-id="${s.id}"]`);
+      const priority = document.querySelector(`[data-priority="${s.id}"]`);
+      if (check) check.checked = true;
+      if (priority && s.priority) priority.value = s.priority;
+    });
+  } catch(e) {}
+}
+
+function buildSummaryText() {
+  const selected = selectedData();
+  const modules = new Map();
+  selected.forEach(sel => sel.item[3].forEach(mid => modules.set(mid, MODULES[mid])));
+  const lines = [];
+  lines.push('【羅鈺室內裝修設計｜官網需求確認】');
+  lines.push(`公司／專案：${document.getElementById('company').value || '-'}`);
+  lines.push(`確認人：${document.getElementById('contact').value || '-'}`);
+  lines.push(`日期：${document.getElementById('date').value || '-'}`);
+  lines.push('');
+  lines.push(`已選使用情境：${selected.length} 項`);
+  selected.forEach(s => lines.push(`- [${s.priority}] ${s.id} ${s.item[1]}`));
+  lines.push('');
+  lines.push(`涉及製作模組：${modules.size} 個`);
+  [...modules.entries()].sort((a,b)=>Number(a[0].slice(1))-Number(b[0].slice(1))).forEach(([id,m]) => lines.push(`- ${id} ${m.name}（${m.type}）`));
+  const notes = document.getElementById('notes').value.trim();
+  if (notes) { lines.push(''); lines.push('其他補充：'); lines.push(notes); }
+  lines.push('');
+  lines.push('註：同一製作模組即使由多個使用情境觸發，報價時只計一次；實際費用仍依最終規格、資料量與整合範圍確認。');
+  return lines.join('\n');
+}
+
+async function copySummary() {
+  const text = buildSummaryText();
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch(e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+  }
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 1500);
+}
+
+function resetAll() {
+  if (!confirm('確定要清除目前所有勾選與填寫內容嗎？')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  document.querySelectorAll('.check').forEach(c => c.checked = false);
+  document.querySelectorAll('.priority').forEach(p => p.value = '必要');
+  document.getElementById('contact').value = '';
+  document.getElementById('notes').value = '';
+  updateUI();
+}
+
+renderSections();
+loadState();
+updateUI();
+document.addEventListener('change', e => {
+  if (e.target.matches('.check,.priority,#company,#contact,#date')) updateUI();
+});
+document.getElementById('notes').addEventListener('input', saveState);
+document.getElementById('company').addEventListener('input', saveState);
+document.getElementById('contact').addEventListener('input', saveState);
+document.getElementById('copyBtn').addEventListener('click', copySummary);
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+document.getElementById('resetBtn').addEventListener('click', resetAll);
+</script>
+</body>
+</html>
